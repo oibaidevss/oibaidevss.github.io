@@ -257,8 +257,8 @@ body.splash-is-inactive .splash{
   left: 0;
   right: 0;
   margin: 0 auto;
+  width: calc(300px + (700 - 300) * ((100vw - 414px) / (2560 - 414)));
 }
-
 
 /* *********************
 ******* SECTION *
