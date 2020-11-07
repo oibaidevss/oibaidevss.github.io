@@ -1,0 +1,324 @@
+@font-face {
+    font-family: Roboto-Black;
+    src: url('../fonts/roboto/Roboto-Black.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto-BlackItalic;
+    src: url('../fonts/roboto/Roboto-BlackItalic.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url('../fonts/roboto/Roboto-Bold.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto-BoldItalic;
+    src: url('../fonts/roboto/Roboto-BoldItalic.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto-Italic;
+    src: url('../fonts/roboto/Roboto-Italic.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url('../fonts/roboto/Roboto-Light.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto-LightItalic;
+    src: url('../fonts/roboto/Roboto-LightItalic.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url('../fonts/roboto/Roboto-Medium.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto-MediumItalic;
+    src: url('../fonts/roboto/Roboto-MediumItalic.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('../fonts/roboto/Roboto-Regular.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto-Thin;
+    src: url('../fonts/roboto/Roboto-Thin.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto-ThinItalic;
+    src: url('../fonts/roboto/Roboto-ThinItalic.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+
+@font-face {
+    font-family: Montserrat-Black;
+    src: url('../fonts/montserrat/Montserrat-Black.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Spartan-Black;
+    src: url('../fonts/spartan/static/Spartan-Black.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url('../fonts/spartan/static/Spartan-Regular.ttf');
+    font-weight: 400;
+    font-style: normal
+}
+
+body{
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+p,span{
+  font-family: Montserrat-Regular;
+}
+
+h1{}
+h2{
+  font-family: Montserrat-Regular;
+}
+
+.font-spartan-black{
+    font-family: Spartan-Black;
+}
+
+.font-roboto-black{
+    font-family: Roboto-Black;
+}
+
+.font-montserrat-black{
+    font-family: Montserrat-Black;
+}
+
+.rotate-90{
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+
+
+  transition: transform 1s ease;
+}
+
+.navbar{
+  height: 74px;
+}
+
+.navbar a.navbar-brand{
+  line-height: 60px;
+  position: absolute;
+  top: 8px;
+}
+
+
+a h1.oibai:hover{
+  color: #000000;
+}
+
+
+a h1.oibai:hover .rotate-90{
+  transform: rotate(-75deg);
+  -webkit-transform: rotate(-75deg);
+  -moz-transform: rotate(-75deg);
+  -ms-transform: rotate(-75deg);
+  -o-transform: rotate(-75deg);
+
+
+}
+
+a h1.oibai {
+    position: relative;
+    font-size: 3rem;
+    color: #fff;
+    line-height: 60px;
+    letter-spacing: 1.2px;
+    transition: color 1s ease;
+}
+
+div.dev{
+    font-size: 1rem;
+    position: absolute;
+    right: -35px;
+    top: -8px;
+    letter-spacing: 0;
+}
+
+.bg-gradient{
+  background: rgb(0,212,255);
+  background: linear-gradient(to right, rgba(109,207,246,1)14%,rgba(242,174,199,1) 45%,rgba(109,207,246,1) 100%,rgba(30,87,153,1) 100%);
+}
+
+
+
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 822;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* *********************
+******* SPLASH *********
+********************* */
+
+body.splash-is-active{
+  overflow: hidden;
+}
+
+body.splash-is-inactive .splash{
+  opacity: 0;
+  /* transition: opacity 2s ease; */
+  height: 0;
+  display: none;
+}
+
+
+
+.splash{
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+  transition: height 2s ease, background-color 3s ease;
+  pointer-events: none;
+}
+
+.splash2{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  background: linear-gradient(to right, rgba(109,207,246,1),rgba(242,174,199,1));
+  transition: 1.5s ease all; z-index: 0; top: 0; left: 0; visibility: visible;
+}
+
+.splash2.visible{
+  opacity: 1;
+}
+
+.splash img, .splash svg{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+
+/* *********************
+******* SECTION *
+********************* */
+section{
+  height: 100vh;
+}
+
+section.first{
+  background-color: transparent;
+  background-position: center;
+}
+section.second{
+  background-color: blue;
+  background-position: center;
+}
+
+section.main{
+  height: calc(100vh - 72px);
+  background-image: url(../images/svg/code.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+section.main p{
+  margin-top: calc(100% - 85%);
+  margin-bottom: calc(100% - 75%);
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+
+
+/* *********************
+******* FOOTER SECTION *
+********************* */
+footer.footer-visible{
+    transform: translate3d(0, 0, 0);
+}
+
+footer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 155px;
+    padding-bottom: 155px;
+    transform: translate3d(0, 100%, 0);
+    transition: all 300ms ease;
+    z-index: 9999;
+    background-color: #000000;
+}
+
+
+/* custom global classes */
+.absolute{
+  position: absolute;
+}
+
+.top-50{
+  top: 35%;
+}
