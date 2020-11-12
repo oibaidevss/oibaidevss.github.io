@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="467" height="496.032" viewBox="0 0 467 496.032">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: transparent;
+        fill-rule: evenodd;
+        stroke-dasharray: 200;
+        stroke-dashoffset: 200;
+        animation: dash 2s ease-in-out infinite;
+        transition: fill 2s ease, stroke 5s ease;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+
+    <linearGradient id="gradient">
+      <stop offset="5%" stop-color="rgba(109,207,246,1)" />
+      <stop offset="50%" stop-color="rgba(242,174,199,1)" />
+      <stop offset="95%" stop-color="rgba(109,207,246,1)" />
+    </linearGradient>
+
+  </defs>
+  <path id="_" data-name="+" stroke="url(#gradient)" stroke-width="5" class="cls-1" d="M293.517,1.669H206.481V200.542H16.5v81.889H206.481v215.25h87.036V282.431H483.5V200.542H293.517V1.669Z" transform="translate(-16.5 -1.656)"/>
+</svg>

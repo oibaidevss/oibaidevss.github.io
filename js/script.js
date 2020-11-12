@@ -1,5 +1,16 @@
-// Footer ANIMATION
-$(document).ready(function(){
+
+// on load function
+$(window).on('load', function(){
+  // #FULLPAGE JS
+  var fullpagejs = new fullpage('#fullpage', {
+    sectionsColor: ['rgba(109,207,246,1)', 'rgba(242,174,199,1)', 'rgb(184 189 220)', '#000000'],
+    navigation: true,
+    navigationPosition: 'right',
+  });
+
+  fullpagejs.setMouseWheelScrolling(false);
+  fullpagejs.setAllowScrolling(false);
+
   window.onscroll = function(ev) {
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         $('footer').addClass('footer-visible');
@@ -8,46 +19,26 @@ $(document).ready(function(){
         $('footer').removeClass('footer-visible');
       }
   };
-  // cursor
-  const cursor = curDot();
-  cursor.over($('section'), {
-    borderColor: 'rgba(255,255,255,.38)',
-    broderWidth: 2
-  });
 
-  cursor.over($('h1'), {
-    scale: .5,
-    background: '#fff'
-  });
 
-  // text animation
-  var textWrapper = document.querySelector('.ml9 .letters');
-  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-  anime.timeline({loop: true})
-  .add({
-    targets: '.ml9 .letter',
-    scale: [0, 1],
-    duration: 1500,
-    elasticity: 600,
-    delay: (el, i) => 45 * (i+1)
-  }).add({
-    targets: '.ml9',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-});
-
-// on load function
-$(window).on('load', function(){
-  // initialize splash on window load
   $('body').addClass('splash-is-active');
 
   $('.splash').on('click', function(){
-      $('body').removeClass('splash-is-active');
-      $('body').addClass('splash-is-inactive');
+      $(this).addClass('inactive');
+
+      setTimeout(function(){
+        $('body').removeClass('splash-is-active');
+        $('body').addClass('splash-is-inactive');
+        $('#fullpage').css('opacity', 1);
+        fullpagejs.setMouseWheelScrolling(true);
+        fullpagejs.setAllowScrolling(true);
+        // $('#first').ripples({
+        // 	resolution: 512,
+        // 	dropRadius: 10,
+        // 	perturbance: 0.04,
+        // });
+      }, 2000);
   });
 
   $(".home").on('click', function(){
@@ -55,22 +46,24 @@ $(window).on('load', function(){
   });
 
 
-
-  // $(".splash").css({'background-color': '#fff'});
-
   setTimeout(function(){
     $('.splash2').addClass('visible');
   }, 4400);
+
   setTimeout(function(){
     $(".cls-1").css({
       'fill': '#fff',
     });
   }, 5000);
+
   setTimeout(function(){
     $(".cls-1").css({
       'stroke': 'transparent'
     });
     $(".splash").css({'pointer-events': 'auto'});
   }, 5500);
+
+
+
 
 });
