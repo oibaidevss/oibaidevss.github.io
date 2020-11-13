@@ -3,7 +3,7 @@
 $(window).on('load', function(){
   // #FULLPAGE JS
   var fullpagejs = new fullpage('#fullpage', {
-    sectionsColor: ['rgba(109,207,246,1)', 'rgba(242,174,199,1)', 'rgb(184 189 220)', '#000000'],
+    sectionsColor: ['#a06180', '#41398a', '#0c54d8', '#000000'],
     navigation: true,
     navigationPosition: 'right',
   });
@@ -33,11 +33,11 @@ $(window).on('load', function(){
         $('#fullpage').css('opacity', 1);
         fullpagejs.setMouseWheelScrolling(true);
         fullpagejs.setAllowScrolling(true);
-        // $('#first').ripples({
-        // 	resolution: 512,
-        // 	dropRadius: 10,
-        // 	perturbance: 0.04,
-        // });
+        $('#first').ripples({
+        	resolution: 512,
+        	dropRadius: 10,
+        	perturbance: 0.04,
+        });
       }, 2000);
   });
 
@@ -62,8 +62,4 @@ $(window).on('load', function(){
     });
     $(".splash").css({'pointer-events': 'auto'});
   }, 5500);
-
-
-
-
 });

@@ -113,10 +113,6 @@ p,span{
   font-family: Montserrat-Regular;
 }
 
-h1{}
-h2{
-  font-family: Montserrat-Regular;
-}
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -350,9 +346,32 @@ div#first.section{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+div#first.section div.row.col-md-6{
+  position: relative;
+}
+
+div#first.section p{
+  font-size: 14px;
+  font-weight: 800;
+  color: #00967f !important;
+}
+
+div#first.section h2{
+  font-family: Spartan-Black;
+  font-size: 10rem !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color: #00967f;
+}
+
+
+
 div.section {
   text-align:  center;
-  font-size: 15em;
+  font-size: 1em;
 
   color: #fff;
   font-family: Spartan-Black;
